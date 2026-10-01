@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✏️ Título e descrição (aparecem no Google e quando o link é compartilhado) -->
+  <title>Jackão Alves — Jackão Games</title>
+  <meta name="description" content="Gamer • PS5. Comédia e notícias sobre o mundo gamer. Todos os links do Jackão em um só lugar.">
+  <meta property="og:title" content="Jackão Alves — Jackão Games">
+  <meta property="og:description" content="Gamer • PS5. Comédia e notícias sobre o mundo gamer.">
+  <meta property="og:image" content="foto.jpg">
+  <meta name="theme-color" content="#0a0b14">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@600;700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ✏️ Cores do site */
+    :root {
+      --fundo: #0a0b14;
+      --cartao: #141627;
+      --borda: #262a45;
+      --texto: #eef0ff;
+      --texto-suave: #a3a8c9;
+      --destaque: #4d7cff;       /* azul principal */
+      --destaque-2: #a259ff;     /* roxo do brilho */
+      --destaque-texto: #ffffff;
+    }
+
+    * { box-sizing: border-box; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(600px 300px at 50% -80px, rgba(77, 124, 255, .22), transparent 70%),
+        var(--fundo);
+      color: var(--texto);
+      font-family: "Figtree", system-ui, sans-serif;
+      line-height: 1.5;
+    }
+    main {
+      max-width: 480px;
+      margin: 0 auto;
+      padding: 48px 16px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    /* Perfil */
+    .perfil { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 8px; }
+    .moldura {
+      padding: 3px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--destaque), var(--destaque-2));
+    }
+    .foto, .iniciais {
+      width: 108px; height: 108px; border-radius: 50%;
+      border: 3px solid var(--fundo);
+      background: var(--cartao);
+      display: block;
+    }
+    .foto { object-fit: cover; }
+    .iniciais {
+      display: none; align-items: center; justify-content: center;
+      font-family: "Chakra Petch", sans-serif; font-weight: 700; font-size: 38px;
+    }
+    h1 {
+      margin: 8px 0 0;
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: 700; font-size: 32px; line-height: 1.05; letter-spacing: 0.01em;
+      text-transform: uppercase;
+    }
+    .arroba { color: var(--texto-suave); font-weight: 500; }
+    .tags { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; margin-top: 4px; }
+    .tag {
+      font-family: "Chakra Petch", sans-serif; font-weight: 600; font-size: 13px;
+      letter-spacing: .06em; text-transform: uppercase;
+      padding: 4px 10px; border-radius: 6px;
+      border: 1px solid var(--borda); background: var(--cartao); color: var(--texto);
+    }
+    .bio { margin: 6px 0 0; max-width: 34ch; color: var(--texto-suave); }
+
+    /* Botões de links */
+    .links { display: flex; flex-direction: column; gap: 12px; }
+    .link {
+      display: flex; align-items: center; gap: 14px;
+      min-height: 62px; padding: 12px 18px;
+      background: var(--cartao);
+      border: 1px solid var(--borda);
+      border-radius: 12px;
+      color: var(--texto); text-decoration: none;
+      font-weight: 600;
+      transition: transform .15s ease, border-color .15s ease, box-shadow .15s ease;
+    }
+    .link:hover { transform: translateY(-2px); border-color: var(--destaque); box-shadow: 0 6px 24px rgba(77, 124, 255, .18); }
+    .link:focus-visible { outline: 3px solid var(--destaque-2); outline-offset: 2px; }
+    .link svg { width: 24px; height: 24px; flex-shrink: 0; }
+    .link span { flex-grow: 1; }
+    .link small { display: block; font-weight: 400; color: var(--texto-suave); font-size: 13px; }
+    .link .seta { width: 18px; height: 18px; opacity: .6; }
+    .link.principal {
+      background: linear-gradient(135deg, var(--destaque), var(--destaque-2));
+      border-color: transparent; color: var(--destaque-texto);
+    }
+    .link.principal small { color: var(--destaque-texto); opacity: .85; }
+
+    /* Ícones sociais */
+    .sociais { display: flex; justify-content: center; gap: 10px; }
+    .sociais a {
+      width: 48px; height: 48px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: var(--texto); border: 1px solid var(--borda); background: var(--cartao);
+    }
+    .sociais a:hover { border-color: var(--destaque); color: var(--destaque); }
+    .sociais a:focus-visible { outline: 3px solid var(--destaque-2); outline-offset: 2px; }
+    .sociais svg { width: 22px; height: 22px; }
+
+    footer { text-align: center; font-size: 13px; color: var(--texto-suave); }
+  </style>
+</head>
+<body>
+  <main>
+
+    <!-- ✏️ Foto: salve sua foto como foto.jpg nesta pasta. Sem ela, aparecem as iniciais. -->
+    <header class="perfil">
+      <div class="moldura">
+        <img class="foto" src="foto.jpg" alt="Foto do Jackão Alves"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+        <div class="iniciais" aria-hidden="true">JA</div>
+      </div>
+      <h1>Jackão Alves</h1>
+      <div class="arroba">@jackaogames</div>
+      <div class="tags"><span class="tag">Gamer</span><span class="tag">PS5</span></div>
+      <p class="bio">Comédia e notícias sobre o mundo gamer.</p>
+    </header>
+
+    <!-- ✏️ Links: troque o href="..." e os textos. Apague os que não usar. -->
+    <nav class="links" aria-label="Meus links">
+      <a class="link principal" href="https://www.tiktok.com/@jackaoh" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V2a5 5 0 0 0 5 5"/></svg>
+        <span>Me segue no TikTok<small>@jackaoh</small></span>
+        <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="link" href="https://www.instagram.com/jackaogames/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+        <span>Instagram de games<small>@jackaogames</small></span>
+        <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="link" href="https://www.instagram.com/jackaohtech/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>
+        <span>Instagram de tecnologia<small>@jackaohtech</small></span>
+        <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+      <a class="link" href="mailto:jackaobhd@gmail.com?subject=Parceria%20-%20Jack%C3%A3o%20Games">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+        <span>Parcerias e publicidade<small>jackaobhd@gmail.com</small></span>
+        <svg class="seta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"/></svg>
+      </a>
+    </nav>
+
+    <div class="sociais">
+      <a href="https://www.instagram.com/jackaogames/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+      </a>
+      <a href="https://www.tiktok.com/@jackaoh" target="_blank" rel="noopener" aria-label="TikTok">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12a4 4 0 1 0 4 4V2a5 5 0 0 0 5 5"/></svg>
+      </a>
+      <a href="mailto:jackaobhd@gmail.com" aria-label="E-mail">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg>
+      </a>
+    </div>
+
+    <footer>© <span id="ano">2026</span> Jackão Alves · Jackão Games</footer>
+  </main>
+  <script>document.getElementById("ano").textContent = new Date().getFullYear();</script>
+</body>
+</html>
