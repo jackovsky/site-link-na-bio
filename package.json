@@ -2,18 +2,38 @@
   "name": "site-link-na-bio",
   "private": true,
   "version": "1.0.0",
+  "description": "Página de links (link na bio) do criador de conteúdo gamer Jackão Alves, feita com React e Vite.",
+  "author": "Jackão Alves (https://github.com/jackovsky)",
+  "license": "MIT",
+  "homepage": "https://jackaoalves.netlify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jackovsky/site-link-na-bio.git"
+  },
   "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "vite --open",
     "build": "vite build",
-    "preview": "vite preview --open"
+    "preview": "vite preview --open",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
+    "@eslint/js": "^10.0.1",
     "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^10.11.0",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.7",
+    "globals": "^17.13.0",
+    "prettier": "^3.9.9",
     "vite": "^7.0.0"
   }
 }

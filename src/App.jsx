@@ -30,7 +30,9 @@ export default function App() {
         ))}
       </div>
 
-      <footer>© {new Date().getFullYear()} {perfil.nome} · Jackão Games</footer>
+      <footer>
+        © {new Date().getFullYear()} {perfil.nome} · Jackão Games
+      </footer>
     </main>
   );
 }

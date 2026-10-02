@@ -3,8 +3,8 @@
 export const perfil = {
   nome: "Jackão Alves",
   arroba: "@jackaogames",
-  iniciais: "JA",           // aparece quando não tem foto
-  foto: "/foto.jpg",        // coloque a foto em public/foto.jpg
+  iniciais: "JA", // aparece quando não tem foto
+  foto: "/foto.jpg", // coloque a foto em public/foto.jpg
   tags: ["Gamer", "PS5"],
   bio: "Comédia e notícias sobre o mundo gamer.",
 };

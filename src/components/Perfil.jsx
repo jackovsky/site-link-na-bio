@@ -7,7 +7,9 @@ export default function Perfil({ nome, arroba, iniciais, foto, tags, bio }) {
     <header className="perfil">
       <div className="moldura">
         {semFoto ? (
-          <div className="iniciais" aria-hidden="true">{iniciais}</div>
+          <div className="iniciais" aria-hidden="true">
+            {iniciais}
+          </div>
         ) : (
           <img className="foto" src={foto} alt={`Foto do ${nome}`} onError={() => setSemFoto(true)} />
         )}
@@ -16,7 +18,9 @@ export default function Perfil({ nome, arroba, iniciais, foto, tags, bio }) {
       <div className="arroba">{arroba}</div>
       <div className="tags">
         {tags.map((tag) => (
-          <span key={tag} className="tag">{tag}</span>
+          <span key={tag} className="tag">
+            {tag}
+          </span>
         ))}
       </div>
       <p className="bio">{bio}</p>
